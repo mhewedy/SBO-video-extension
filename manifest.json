@@ -1,0 +1,21 @@
+{
+    "name": "SBO video downloader",
+    "description": "If you have Safari Books online subscription, use this extension to save videos to watch later offline.",
+    "version": "0.4",
+    "permissions": [
+        "cookies",
+        "<all_urls>"
+    ],
+    "content_scripts": [{
+        "matches": ["http://*.safaribooksonline.com/*"],
+        "js": ["jquery.min.js", "content.js"],
+        "run_at": "document_idle"
+    }],
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon/16.png",
+        "48": "icon/48.png",
+        "128": "icon/128.png"
+    },
+     "web_accessible_resources": ["icon/48.png"]
+}
