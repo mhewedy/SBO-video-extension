@@ -29,9 +29,9 @@ function drawDownloadButton(wid, uiconfId, referenceId) {
 }
 
 function handle(o, referenceId) {
-    var from = o.responseText.indexOf('downloadUrl') + 'downloadUrl'.length + 5;
-    var to = o.responseText.indexOf('",', from);
-    var url = o.responseText.substring(from, to).split('\\').join('');
+    var frm = o.responseText.indexOf('downloadUrl') + 'downloadUrl'.length + 5;
+    var to = o.responseText.indexOf('",', frm);
+    var url = o.responseText.substring(frm, to).split('\\').join('');
     console.log('download url: ' + url);
 
     var element = $('a[data-clip-ref="' + referenceId + '"]')[0];
