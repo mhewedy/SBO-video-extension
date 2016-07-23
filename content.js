@@ -39,7 +39,7 @@ function handle(o, referenceId) {
 
     var element = $('a[data-clip-ref="' + referenceId + '"]');
     var dldBtnImg = $('<img>').attr('src', chrome.extension.getURL('icon/48.png')).attr('style', 'width: 16px; vertical-align: middle;');
-    var dldBtn = $('<a>').attr('href', url).attr('title', 'Download ' + element.attr('title').trim()).append(dldBtnImg);
+    var dldBtn = $('<a>').attr('href', url).attr('title', 'Download "' + element.attr('title').trim() + '"').append(dldBtnImg);
 
     element.parent().append(dldBtn);
 }
