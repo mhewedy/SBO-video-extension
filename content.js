@@ -1,8 +1,7 @@
 (function() {
 
     $('a[data-clip-ref]').each(function() {
-        var referenceId = $(this).attr('data-clip-ref');
-        drawDownloadButton(referenceId);
+        drawDownloadButton($(this).attr('data-clip-ref'));
     });
 
 })();
