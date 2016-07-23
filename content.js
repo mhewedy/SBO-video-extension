@@ -22,7 +22,6 @@ function start() {
 }
 
 function drawDownloadButton(wid, uiconfId, referenceId) {
-
     var url = 'http://cdnapi.kaltura.com/html5/html5lib/v2.35/mwEmbedFrame.php?&wid=_' + wid +
         '&uiconf_id=' + uiconfId + '&flashvars[referenceId]=' + referenceId + '&callback=o';
     console.log('call url: ' + url);
