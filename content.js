@@ -2,13 +2,14 @@
 
     $('a[data-clip-ref]').each(function() {
         var referenceId = $(this).attr('data-clip-ref');
-        console.log('referenceId: ' + referenceId);
         drawDownloadButton(referenceId);
     });
 
 })();
 
 function drawDownloadButton(referenceId) {
+    console.log('referenceId: ' + referenceId);
+
     // 1. define the 3 variables to be used in the url to get entryId
     var wid, uiconfId;
 
