@@ -7,14 +7,19 @@ var urls = [];
 	
 	setTimeout(function(){
 		console.log(urls);
-		var div = $('<button> Download All </button>');
-		div.click(function(){
+	    var dldBtnImg = $('<img>').attr('src', chrome.extension.getURL('icon/48.png')).attr('style', 'width: 16px; vertical-align: middle;');
+		var dldBtn = $('<a>Download All</a>').css({
+		    'padding-left': '20px',
+		    'padding-right': '5px',
+			'cursor': 'pointer'
+		});
+		dldBtn.click(function(){
 			chrome.runtime.sendMessage({urls: urls}, function(response) {
 			  // console.log('farwell: ', response.farewell);
 			});
 			
 		});
-		$('.brightcove_video_title').parent().prepend(div);
+		$('#ajaxtoc > div > div > h3').append(dldBtn).append(dldBtnImg);
 	}, 7000);
 })();
 
