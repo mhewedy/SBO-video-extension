@@ -4,8 +4,12 @@
     "version": "0.5",
     "permissions": [
         "cookies",
+		"downloads",
         "<all_urls>"
     ],
+	"background": {
+	    "scripts": ["background.js"]
+	},
     "content_scripts": [{
         "matches": ["http://*.safaribooksonline.com/*"],
         "js": ["jquery.min.js", "content.js"],

@@ -1,7 +1,21 @@
+var urls = [];
+
 (function() {
     // start after 5 seconds, as the TOC is being re-drawn by ajax, so waiting for him first,
     // it is not the correct solution, the correct solution is to wait for this action to done first but this is a Quick-and-dirty solution.
     setTimeout(start, 5000);
+	
+	setTimeout(function(){
+		console.log(urls);
+		var div = $('<button> Download All </button>');
+		div.click(function(){
+			chrome.runtime.sendMessage({urls: urls}, function(response) {
+			  // console.log('farwell: ', response.farewell);
+			});
+			
+		});
+		$('.brightcove_video_title').parent().prepend(div);
+	}, 7000);
 })();
 
 function start() {
@@ -42,4 +56,5 @@ function handle(o, referenceId) {
     var dldBtn = $('<a>').attr('href', url).attr('title', 'Download "' + element.attr('title').trim() + '"').append(dldBtnImg);
 
     element.parent().append(dldBtn);
+	urls.push(url);
 }
