@@ -12,7 +12,7 @@
 	},
     "content_scripts": [{
         "matches": ["*://*.safaribooksonline.com/*"],
-        "js": ["jquery.min.js", "content.js"],
+        "js": ["lib/jquery.min.js", "core/util.js", "core/techbus.js", "core/new.js"],
         "run_at": "document_idle"
     }],
     "manifest_version": 2,
