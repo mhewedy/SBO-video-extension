@@ -7,7 +7,8 @@ function start(drawParams, html) {
 
     var jsSrc = $('#metadata_flashactive > div > div.sdwBoxContent > div.brightcove_video > script', html).attr('src');
     if (!jsSrc) {
-        console.error("js source is undefined!");
+        console.error("js source is undefined!, exiting...");
+        return;
     }
 
     var a = jsSrc.match(/\d+/g);
