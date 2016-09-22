@@ -7,9 +7,6 @@
 		"downloads",
         "<all_urls>"
     ],
-	"background": {
-	    "scripts": ["background.js"]
-	},
     "content_scripts": [{
         "matches": ["*://*.safaribooksonline.com/*"],
         "js": ["lib/jquery.min.js", "core/util.js", "core/techbus.js", "core/new.js"],
