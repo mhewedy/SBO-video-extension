@@ -1,4 +1,4 @@
-if (window.location.hostname.indexOf('techbus') < 0) {
+function startNew() {
 
     var techbusBaseUrl = 'https://techbus.safaribooksonline.com/';
     var pathArr = window.location.pathname.split('/');
@@ -7,7 +7,7 @@ if (window.location.hostname.indexOf('techbus') < 0) {
     $.get(techbusBaseUrl + courseId).always(function(html) {
         start({
             drawFunction: draw,
-            domList: $('ol > li li > a')
+            domList: $('#container  ol > li > ol > li > a')
         }, html);
     });
 }

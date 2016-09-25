@@ -1,5 +1,4 @@
-if (window.location.hostname.indexOf('techbus') >= 0) {
-
+function startTechbus() {
     setTimeout(function() {
         start({
             drawFunction: draw,
