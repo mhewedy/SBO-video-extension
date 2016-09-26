@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     chrome.downloads.download({
         url: message.vedioUrl,
-        filename: leftPad(message.index + 1) + ' - ' + message.title + '.mp4',
+        filename: leftPad(message.index + 1) + ' - ' + message.title.replace(/\W+/g, " ") + '.mp4',
         saveAs: false
     });
 });
