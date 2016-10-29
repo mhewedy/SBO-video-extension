@@ -1,7 +1,7 @@
 (function() {
-    if (window.location.hostname.indexOf('techbus') >= 0) {
-        startTechbus();
-    } else {
+    if (window.location.hostname.indexOf('www.safaribooksonline.com') >= 0) {
         startNew();
+    } else {
+        startTechbus();
     }
 })();
