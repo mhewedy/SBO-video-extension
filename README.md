@@ -33,4 +33,4 @@ Then now you can enjoy the video downloads by clicking the little red icon besid
 
 
 ## Have issue?
-Feel free to contact me via bug, email or any mean if you need any help.
+Feel free to contact me via [opening an issue] (https://github.com/mhewedy/SBO-video-extension/issues), email or any mean if you need any help.
