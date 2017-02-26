@@ -4,7 +4,7 @@ function draw(domList, vedioUrl, index) {
     var dldBtn = $('<a>').attr('title', 'Click to Download').attr('style', 'cursor: pointer; margin-left: 7px;').append(dldBtnImg);
 
     var title = $(element).attr('title') || $(element).text();
-
+    
     dldBtn.click(function() {
         chrome.runtime.sendMessage({
             vedioUrl: vedioUrl,
