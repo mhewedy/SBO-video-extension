@@ -4,7 +4,11 @@ function startNew() {
     var pathArr = window.location.pathname.split('/');
     var courseId = pathArr[pathArr.length - 2];
 
-    var tocId = $('#toc').length > 0 ? '#toc' : '#container'
+
+    const defaultTocId = '#container'
+    const altTocId = '#toc'
+
+    var tocId = $(defaultTocId).length > 0 ? defaultTocId : altTocId
 	
     var flatTocSelector = tocId + ' ol > li > a'
     var tocSelector = tocId + ' ol > li > ol > li > a'
