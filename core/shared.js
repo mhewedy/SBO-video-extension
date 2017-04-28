@@ -6,11 +6,19 @@ function draw(domList, vedioUrl, index) {
     var title = $(element).attr('title') || $(element).text();
     
     dldBtn.click(function() {
-        chrome.runtime.sendMessage({
-            vedioUrl: vedioUrl,
-            index: index,
-            title: title
-        }, function(response) {});
+        var http = new XMLHttpRequest();
+        http.open('HEAD', vedioUrl);
+        http.onreadystatechange = function() {
+            if (this.readyState === this.DONE) {
+                var finalUrl = this.responseURL.slice(0, -1 * '/clipTo/60000/name/a.mp4'.length);
+                chrome.runtime.sendMessage({
+                    vedioUrl: finalUrl,
+                    index: index,
+                    title: title
+                }, function(response) {});
+            }
+        };
+        http.send();
     });
     dldBtn.insertAfter($(element));
 }
