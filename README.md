@@ -1,10 +1,8 @@
 # Welcome to Safari (SBO) Chrome Video Extension
 
-Where SBO refers to Safari Books Online (copy rights reserved)
+Where SBO refers to Safari Books Online (copyrights reserved)
 
-You can download the extension for chrome
-[from Chrome webstore here ](https://chrome.google.com/webstore/detail/safari-books-online-video/ihgjlggckknakenjhgmfgaoalflhfihl).
-
+[![Download Now](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png)](https://chrome.google.com/webstore/detail/safari-books-online-video/ihgjlggckknakenjhgmfgaoalflhfihl).
 
 ## Features
 
