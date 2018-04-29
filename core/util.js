@@ -32,7 +32,7 @@ function _getVedioForRefList(apiParams, drawParams) {
 }
 
 function _getVedioForRefId(apiParams, drawParams, referenceId, index) {
-    var url = 'http://cdnapi.kaltura.com/html5/html5lib/v2.35/mwEmbedFrame.php?&wid=_' + apiParams.wid +
+    var url = 'https://cdnapisec.kaltura.com/html5/html5lib/v2.35/mwEmbedFrame.php?&wid=_' + apiParams.wid +
         '&uiconf_id=' + apiParams.uiconfId + '&flashvars[referenceId]=' + referenceId + '&callback=o';
 
     $.get(url).always(function(o) {
