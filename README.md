@@ -20,9 +20,13 @@ Once you have the extension installed, and you click on any video course, after 
 ### The new website
 The new webiste that have the domain name: `www.safaribooksonline.com`
 
-In case of the new website and after installing the extension and one you opened the video course main page that have the **Table of Contents** section, you first need to click on **load unsafe scripts**.
+> Thanks to @cbkihong, we no longer need this in the next releases
 
-<img src="./docs/load_unsafe_scripts.png" width="200">
+> In case of the new website and after installing the extension and one you opened the video course main page that have the **Table of Contents** section, you first need to click on **load unsafe scripts**.
+
+> <img src="./docs/load_unsafe_scripts.png" width="200">
+
+
 
 Then now you can enjoy the video downloads by clicking the little red icon beside each video lesson allow you to download the video (see the picture).
 
