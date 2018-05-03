@@ -1,4 +1,6 @@
-let drawService = (function () {
+const sboModule = sboModule || {};
+
+sboModule.drawService = (function () {
 
     return {
         draw: function (domList, vedioUrl, index) {

@@ -1,3 +1,5 @@
+const sboModule = sboModule || {};
+
 (function () {
     let startNew = function () {
 
@@ -23,14 +25,14 @@
 
         let domList = getDomList();
         $.get(techbusBaseUrl + courseId).always(function (html) {
-            crawlerService.crawl({drawFunction: drawService.draw, domList: domList}, html);
+            sboModule.crawlerService.crawl({drawFunction: sboModule.drawService.draw, domList: domList}, html);
         });
     };
 
     let startTechbus = function () {
         let domList = $('a[data-clip-ref]');
         setTimeout(function () {
-            crawlerService.crawl({drawFunction: drawService.draw, domList: domList});
+            sboModule.crawlerService.crawl({drawFunction: sboModule.drawService.draw, domList: domList});
         }, 5000);
     };
 

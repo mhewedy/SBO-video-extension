@@ -1,4 +1,6 @@
-let crawlerService = (function () {
+const sboModule = sboModule || {};
+
+sboModule.crawlerService = (function () {
 
     let getVideoForRefList = function (apiParams, drawParams) {
         apiParams.refList.forEach(function (e, i) {
