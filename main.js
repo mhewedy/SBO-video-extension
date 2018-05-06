@@ -1,4 +1,4 @@
-const sboModule = sboModule || {};
+var sboModule = sboModule || {};
 
 (function () {
     let startNew = function () {
@@ -23,16 +23,14 @@ const sboModule = sboModule || {};
             return isFlatToC ? $(flatTocSelector) : $(tocSelector);
         };
 
-        let domList = getDomList();
         $.get(techbusBaseUrl + courseId).always(function (html) {
-            sboModule.crawlerService.crawl({drawFunction: sboModule.drawService.draw, domList: domList}, html);
+            sboModule.crawlerService.crawl(getDomList(), html);
         });
     };
 
     let startTechbus = function () {
-        let domList = $('a[data-clip-ref]');
         setTimeout(function () {
-            sboModule.crawlerService.crawl({drawFunction: sboModule.drawService.draw, domList: domList});
+            sboModule.crawlerService.crawl($('a[data-clip-ref]'));
         }, 5000);
     };
 
