@@ -17,8 +17,23 @@ sboModule.crawlerService = function () {
             let to = o.responseText.indexOf('",', frm);
             let url = o.responseText.substring(frm, to).split('\\').join('');
 
-            sboModule.drawService.draw(domList, url, index);
+            sboModule.drawService.draw(domList, url, index, extractFlavors(o.responseText));
         });
+    };
+
+    let extractFlavors = function (responseText) {
+        let frm = responseText.indexOf('flavorAssets') + 'flavorAssets'.length + 3;
+        let to = responseText.indexOf('}],\\"', frm) + 2;
+        let flavorAssets = JSON.parse(responseText.substring(frm, to).split('\\').join(''));
+
+        return flavorAssets.map(it => ({
+            id: it.flavorParamsId,
+            isAudio: it.width === 0 && it.height === 0,
+            width: it.width,
+            height: it.height,
+            bitrate: it.bitrate
+        })).sort((a, b) => (a.width * a.height * a.bitrate) >
+            (b.width * b.height * b.bitrate));
     };
 
     return {

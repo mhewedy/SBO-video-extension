@@ -8,6 +8,9 @@ Where SBO refers to Safari Books Online (copyrights reserved)
 
 This extension can be used for both new safari site and old site (techbus) to download the videos (but only if you have a registered account at Safari books online)
 
+### New: Choose Download Quality
+Now you can choose the download quality (usually start from audio to medium and hight quality video)
+
 ### The new website
 The new webiste that have the domain name: `www.safaribooksonline.com`
 
