@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-mkdir dist
+mkdir -p dist
 
-zip SBO-video-extension.zip core docs lib main.js manifest.json
+rm -rf dist/*
+
+zip SBO-video-extension.zip core/* lib/* main.js manifest.json
 mv SBO-video-extension.zip dist/
