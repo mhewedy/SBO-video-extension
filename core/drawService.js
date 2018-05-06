@@ -12,7 +12,7 @@ sboModule.drawService = (function () {
 
             dldBtn.click(function () {
                 let http = new XMLHttpRequest();
-                http.open('HEAD', vedioUrl);
+                http.open('HEAD', videoUrl);
                 http.onreadystatechange = function () {
                     if (this.readyState === this.DONE) {
                         let finalUrl = this.responseURL.slice(0, -1 * '/clipTo/60000/name/a.mp4'.length);

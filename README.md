@@ -8,6 +8,16 @@ Where SBO refers to Safari Books Online (copyrights reserved)
 
 This extension can be used for both new safari site and old site (techbus) to download the videos (but only if you have a registered account at Safari books online)
 
+### The new website
+The new webiste that have the domain name: `www.safaribooksonline.com`
+
+> Thanks to @cbkihong, we no longer need to load unsafe scripts
+
+Then now you can enjoy the video downloads by clicking the little black icon beside each video lesson allow you to download the video (see the picture).
+
+
+<img src="./docs/new.png" width="500">
+
 ### The Old website (techbus)
 
 The old website the one that have the domain name: `techbus.safaribooksonline.com`.
@@ -16,23 +26,6 @@ Once you have the extension installed, and you click on any video course, after 
 > note, the picture is out dated, the icon should be in black like the new website below.
 
 <img src="./docs/techbus.png" width="500">
-
-
-### The new website
-The new webiste that have the domain name: `www.safaribooksonline.com`
-
-> Thanks to @cbkihong, we no longer need to load unsafe scripts
-
-~~In case of the new website and after installing the extension and one you opened the video course main page that have the **Table of Contents** section, you first need to click on **load unsafe scripts**.~~
-
-<img src="./docs/load_unsafe_scripts.png" width="200">
-
-
-
-Then now you can enjoy the video downloads by clicking the little black icon beside each video lesson allow you to download the video (see the picture).
-
-
-<img src="./docs/new.png" width="500">
 
 
 ## Have issue?
