@@ -14,9 +14,7 @@ Now you can choose the download quality (usually start from audio to medium and 
 ### The new website
 The new webiste that have the domain name: `www.safaribooksonline.com`
 
-> Thanks to @cbkihong, we no longer need to load unsafe scripts
-
-Then now you can enjoy the video downloads by clicking the little black icon beside each video lesson allow you to download the video (see the picture).
+Then now you can enjoy the video downloads by clicking the little black icon beside each video lesson allow you to choose the quality to download (see the picture).
 
 
 <img src="./docs/new.png" width="500">
@@ -25,8 +23,7 @@ Then now you can enjoy the video downloads by clicking the little black icon bes
 
 The old website the one that have the domain name: `techbus.safaribooksonline.com`.
 
-Once you have the extension installed, and you click on any video course, after a while (5 seconds) you will see a little black icon beside each video lesson allow you to download the video (see the picture).
-> note, the picture is out dated, the icon should be in black like the new website below.
+Once you have the extension installed, and you click on any video course, after a while (5 seconds) you will see a little orange icon beside each video lesson allow you to choose the quality to download (see the picture).
 
 <img src="./docs/techbus.png" width="500">
 
