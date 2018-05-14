@@ -28,5 +28,7 @@ Once you have the extension installed, and you click on any video course, after 
 <img src="./docs/techbus.png" width="500">
 
 
-## Have issue?
+## Have issue? 
 Feel free to contact me via [opening an issue] (https://github.com/mhewedy/SBO-video-extension/issues/new), email or any mean if you need any help.
+
+> You need to provide a course URL and chrome console output along with your issue to be able to help
