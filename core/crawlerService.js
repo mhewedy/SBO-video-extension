@@ -57,7 +57,7 @@ sboModule.crawlerService = function () {
 
             domList.each(function () {
                 let attr = isNew ?
-                    $(this).find('a').attr('href').match('.*/(.*-.*)')[1] :
+                    $(this).attr('href').match(/^.*\/(.*\/.*).html$/)[1] :
                     $(this).attr('data-clip-xmlid');
                 apiParams.refList.push(attr.replace('/', '-'));
             });
