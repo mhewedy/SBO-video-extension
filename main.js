@@ -7,7 +7,7 @@ var sboModule = sboModule || {};
         let courseId = window.location.pathname.match('/([0-9]+)/?')[1];
 
         $.get(techbusBaseUrl + courseId).always(function (html) {
-            sboModule.crawlerService.crawl($('.TableOfContents-TOCPart-Rl-Yx > ol > li'), html);
+            sboModule.crawlerService.crawl($('.tab-group-content ol > li').children('div.content-ContentSummary').parent(), html);
         });
     };
 
