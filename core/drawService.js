@@ -32,11 +32,12 @@ sboModule.drawService = (function () {
             let dldBtnIcon = $('<i>').attr('class', 'fa fa-download');
             let dldBtn = $('<a>').attr('title', '').attr('style', 'cursor: pointer; margin-left: 7px;').append(dldBtnIcon);
             let title = $(element).attr('title') || $(element).text();
-            dldBtn.insertAfter($(element));
+            dldBtn.insertAfter($('.orm-PlaylistsDropdown-playlistsDropdown', $(element)));
 
 
             let dialog = $('<div>').attr('style', 'padding: 6px 14px 5px 12px; margin-left: 15px; ' +
-                'display: inline; box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 2px;').hide();
+                'display: inline; box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 2px; ' + 
+                'background-color: rgb(255, 255, 255); position: absolute; right: 0px; z-index: 99;').hide();
 
             $(document).click(function (e) {
                 if (e.target === dldBtn[0] || e.target === dldBtnIcon[0]) {
