@@ -34,14 +34,14 @@ sboModule.drawService = (function () {
             let title = $(element).attr('title') || $(element).text();
             dldBtn.insertAfter($('.orm-PlaylistsDropdown-playlistsDropdown', $(element)));
 
-            var dialogStyle = 'padding: 6px 14px 5px 12px;' + 
-            'margin-left: -240px;' + 
-            'box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 2px;' + 
-            'background-color: rgb(255, 255, 255);' + 
-            'z-index: 99;' + 
-            'top: 0px;' + 
-            'left: 0px;' + 
-            'display: none;';
+            var dialogStyle = 'padding: 6px 14px 5px 12px;' +
+                'margin-left: -240px;' +
+                'box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 2px;' +
+                'background-color: rgb(255, 255, 255);' +
+                'z-index: 99;' +
+                'top: 0px;' +
+                'left: 0px;' +
+                'display: none;';
 
             let dialog = $('<div>').attr('style', dialogStyle + ';display: none;');
 
