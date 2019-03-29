@@ -8,20 +8,12 @@ sboModule.drawService = (function () {
     };
 
     let downloadHandler = function (flavor, videoUrl, index, title) {
-        let http = new XMLHttpRequest();
-        http.open('HEAD', videoUrl.replace(/^(.*)\/.*$/, '$1/' + flavor.id));
-        http.onreadystatechange = function () {
-            if (this.readyState === this.DONE) {
-                let finalUrl = this.responseURL.slice(0, -1 * '/clipTo/60000/name/a.mp4'.length);
-                chrome.runtime.sendMessage({
-                    videoUrl: finalUrl,
-                    index: index,
-                    title: title
-                }, function (response) {
-                });
-            }
-        };
-        http.send();
+        chrome.runtime.sendMessage({
+            videoUrl: videoUrl,
+            index: index,
+            title: title
+        }, function (response) {
+        });
     };
 
     return {
@@ -34,14 +26,14 @@ sboModule.drawService = (function () {
             let title = $(element).attr('title') || $(element).text();
             dldBtn.insertAfter($('.orm-PlaylistsDropdown-playlistsDropdown', $(element)));
 
-            var dialogStyle = 'padding: 6px 14px 5px 12px;' + 
-            'margin-left: -240px;' + 
-            'box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 2px;' + 
-            'background-color: rgb(255, 255, 255);' + 
-            'z-index: 99;' + 
-            'top: 0px;' + 
-            'left: 0px;' + 
-            'display: none;';
+            var dialogStyle = 'padding: 6px 14px 5px 12px;' +
+                'margin-left: -240px;' +
+                'box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 2px;' +
+                'background-color: rgb(255, 255, 255);' +
+                'z-index: 99;' +
+                'top: 0px;' +
+                'left: 0px;' +
+                'display: none;';
 
             let dialog = $('<div>').attr('style', dialogStyle + ';display: none;');
 
