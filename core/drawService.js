@@ -8,12 +8,20 @@ sboModule.drawService = (function () {
     };
 
     let downloadHandler = function (flavor, videoUrl, index, title) {
-        chrome.runtime.sendMessage({
-            videoUrl: videoUrl,
-            index: index,
-            title: title
-        }, function (response) {
-        });
+        let http = new XMLHttpRequest();
+        http.open('HEAD', videoUrl.replace(/^(.*)\/.*$/, '$1/' + flavor.id));
+        http.onreadystatechange = function () {
+            if (this.readyState === this.DONE) {
+                let finalUrl = this.responseURL.split('/clipTo/60000/name/a.mp4').join('');
+                chrome.runtime.sendMessage({
+                    videoUrl: finalUrl,
+                    index: index,
+                    title: title
+                }, function (response) {
+                });
+            }
+        };
+        http.send();
     };
 
     return {
