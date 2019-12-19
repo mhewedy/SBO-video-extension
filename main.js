@@ -4,7 +4,7 @@ var sboModule = sboModule || {};
     let startNew = function () {
 
         let techbusBaseUrl = 'https://techbus.safaribooksonline.com/';
-        let courseId = window.location.pathname.match('/([0-9]+)/?')[1];
+        let courseId = window.location.pathname.split('/')[3];
 
         $.get(techbusBaseUrl + courseId).always(function (html) {
             sboModule.crawlerService.crawl($('.tab-group-content ol > li').children('div.content-ContentSummary').parent(), html);
