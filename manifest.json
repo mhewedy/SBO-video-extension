@@ -5,7 +5,8 @@
   "permissions": [
     "cookies",
     "downloads",
-    "*://*/*"
+    "*://*/*",
+    "activeTab"
   ],
   "content_scripts": [
     {
